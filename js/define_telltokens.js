@@ -1,0 +1,12 @@
+const N = (n) => () => PRINTN(n), NUM = PRINTN,
+    D = o => () => DPRINT(o), DESC = DPRINT,
+    A = o => () => PRINTA(o), AN = o => () => PRINTA(o), AO = PRINTA, ANO = PRINTA,
+    CA = o => () => PRINTCA(o), CAN = PRINTCA, CAO = PRINTCA, CANO = PRINTCA,
+    CHAR = PRINTC, CHR = PRINTC, C = (char) => () => PRINTC(char),
+    B = v => () => PRINTB(v.toLowerCase()),
+    THE = o => () => THE_PRINT(o),
+    CTHE = o => () => CTHE_PRINT(o),
+    THEO = THE_PRINT,
+    CTHEO = CTHE_PRINT,
+    THEI = THEI_PRINT,
+    CTHEI = CTHEI_PRINT;

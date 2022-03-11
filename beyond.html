@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond Zork JS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/tables.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/ObjectTree.js"></script>
+    <script src="js/ProxyArray.js"></script>
+    <script src="js/zip.js"></script>
+    <script src="js/Screen.js"></script>
+    <!--Begin of translated files-->
+    <script src="js/constants.js"></script>
+    <script src="js/macros.js"></script>
+    <script src="js/misc.js"></script>
+    <script src="js/define_telltokens.js"></script>
+    <script src="js/verbs.js"></script>
+    <script src="js/rarities.js"></script>
+    <script src="js/syntax.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/places.js"></script>
+    <script src="js/things.js"></script>
+    <script src="js/constants_2.js"></script>
+    <script src="js/monsters.js"></script>
+    <script src="js/people.js"></script>
+    <script src="js/constants_3.js"></script>
+    <script src="js/parser.js"></script>
+</head>
+<body>
+    <div id="screen"></div>
+    <!--To see the actual position of the cursor-->
+    <div style="display: none;" id="cursor"></div>
+    <!--Input Simulation controls-->
+    <div style="display: none;" id="sim">
+        <button id="simstart" onclick="Simulate.start()">Start</button><br>
+        <button id="simnext" onclick="Simulate.next()">Next</button>
+    </div>
+    <script src="js/Simulate.js"></script>
+    <script>
+        Screen.init();
+        //Screen.draw();
+
+        INIT_MISC();
+        INIT_RARITIES();
+        INIT_PLACES();
+        INIT_THINGS();
+        INIT_MONSTERS();
+        INIT_PEOPLE();
+        INIT_THINGS_2();
+        INIT_VERBS();
+        INIT_PARSER();
+
+        CONSTANTS_2_INIT();
+        LOAD_ACTIONS();
+
+        ObjectTree.generate();
+
+        GO();
+
+        BEEP_SOUND = new Audio("resources/BEEP.wav");
+        BOOP_SOUND = new Audio("resources/BOOP.wav");
+
+        /*
+            If you have to simulate a user input enter it here.
+            Example:
+            Simulate.load(`examine stick\nget it`);
+        */
+    </script>
+</body>
+</html>

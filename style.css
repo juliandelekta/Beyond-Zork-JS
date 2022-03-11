@@ -1,0 +1,69 @@
+@font-face {
+    font-family: atariST;
+    src: url(resources/AtariST8x16SystemFont.ttf);
+}
+
+@font-face {
+    font-family: FONT3INFORM;
+    src: url(resources/FONT3INFORM.ttf);
+}
+
+#cursor {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    text-align: right;
+}
+
+body{
+    background-color: black;
+    font-family: atariST;
+    user-select: none;
+}
+
+table {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td {
+    padding: 0;
+    width: 8px;
+    max-width: 8px;
+    height: 16px;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+td div {
+    width: 8px;
+    height: 16px;
+}
+
+tr {
+    padding: 0;
+    margin: 0;
+}
+
+#sim {
+    position: absolute;
+    top:10px;
+}
+
+#sim button {
+    color: white;
+    background: black;
+    font-family: atariST;
+    border: none;
+    transition-duration: 0.3s;
+}
+
+#sim button:hover {
+    background: white;
+    color: black;
+    cursor: pointer;
+}
